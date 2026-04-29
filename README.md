@@ -1,16 +1,73 @@
-# React + Vite
+# Legal Pages App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Production-ready React app for Dr. VJ's Cardiology Clinic SMS Program legal documentation.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `/privacy-policy`
+- `/terms-and-conditions`
 
-## React Compiler
+The app redirects `/` and unknown routes to `/privacy-policy`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- React Router 7
+- Tailwind CSS 4 (via `@tailwindcss/vite`)
+- Vite 8
+- ESLint 10
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+src/
+  app/
+    App.jsx
+  components/
+    LegalDocument.jsx
+    LegalLayout.jsx
+  content/
+    legalContent.js
+  pages/
+    PrivacyPolicyPage.jsx
+    TermsAndConditionsPage.jsx
+  index.css
+  main.jsx
+```
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+```bash
+npm run dev      # local development server
+npm run lint     # lint checks
+npm run build    # production build
+npm run preview  # preview production build locally
+```
+
+## Content Updates
+
+Update legal content in:
+
+- `src/pages/PrivacyPolicyPage.jsx`
+- `src/pages/TermsAndConditionsPage.jsx`
+- `src/content/legalContent.js`
+
+Important placeholders to replace before go-live:
+
+- `supportContactPlaceholder` in `src/content/legalContent.js`
+
+## Deployment Notes
+
+This is a client-side routed SPA. Configure your host to serve `index.html` for app routes:
+
+- `/privacy-policy`
+- `/terms-and-conditions`
+
+Build output is generated in `dist/`.
