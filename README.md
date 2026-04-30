@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Legal Pages App
+# policy-engine# Legal Pages App
 
 Production-ready React app for Dr. VJ's Cardiology Clinic SMS Program legal documentation.
 
@@ -72,6 +71,3 @@ This is a client-side routed SPA. Configure your host to serve `index.html` for 
 - `/terms-and-conditions`
 
 Build output is generated in `dist/`.
-=======
-# policy-engine
->>>>>>> upstream/dev
